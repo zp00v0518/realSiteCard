@@ -213,6 +213,9 @@ body {
 #header .nav ul li .anycash:before {
   content: 'Any Cash';
 }
+#header .nav ul li .pwa:before {
+  content: 'PWA';
+}
 #header .nav ul li:nth-child(8) {
   -webkit-transform: translateY(400%);
           transform: translateY(400%);
@@ -279,7 +282,7 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   position: relative;
-  top: 20%;
+  top: 15%;
 }
 #main .links {
   list-style: none;
@@ -446,7 +449,7 @@ body {
 }
 @media screen and (max-width: 1024px) {
   #main {
-    top: 15%;
+    top: 10%;
   }
 }
 @media screen and (max-width: 868px) {
@@ -586,5 +589,21 @@ body {
             transform: translateX(-50%);
     -webkit-transition: 0.3s;
     transition: 0.3s;
+  }
+  #main .links__item--mail {
+    height: 35px;
+    width: 27px;
+  }
+  #main .links__item--telegram {
+    height: 25px;
+    width: 25px;
+  }
+  #main .links__item--skype {
+    height: 25px;
+    width: 25px;
+  }
+  #main .links__item--phone {
+    height: 21px;
+    width: 20px;
   }
 }

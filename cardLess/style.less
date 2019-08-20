@@ -186,6 +186,9 @@ body {
         & .anycash:before {
           content: 'Any Cash';
         }
+        & .pwa:before {
+          content: 'PWA';
+        }
         .loopChild(8);
       }
     }
@@ -196,7 +199,7 @@ body {
   display: flex;
   justify-content: center;
   position: relative;
-  top: 20%;
+  top: 15%;
   .links {
     list-style: none;
     display: flex;
@@ -306,7 +309,7 @@ body {
 
 @media screen and (max-width: 1024px) {
   #main {
-    top: 15%;
+    top: 10%;
   }
 }
 @media screen and (max-width: 868px) {
@@ -321,7 +324,7 @@ body {
 @media screen and (max-width: 700px) {
   #header {
     & .name {
-      font-size: 60px
+      font-size: 60px;
     }
   }
 }
@@ -413,6 +416,28 @@ body {
               transition: 0.3s;
             }
           }
+        }
+      }
+    }
+  }
+  #main {
+    .links {
+      &__item {
+        &--mail {
+          height: 45px - @difrentSize;
+          width: 37px - @difrentSize;
+        }
+        &--telegram {
+          height: 35px - @difrentSize;
+          width: 35px - @difrentSize;
+        }
+        &--skype {
+          height: 35px - @difrentSize;
+          width: 35px - @difrentSize;
+        }
+        &--phone {
+          height: 31px - @difrentSize;
+          width: 30px - @difrentSize;
         }
       }
     }
