@@ -94,103 +94,103 @@ body {
     .center();
 
     & ul {
-      width: 40%;
-      height: auto;
-      .clear();
-      .center();
-      // .flex(row, space-beetwen);
-      flex-wrap: wrap;
-      list-style: none;
+      // width: 40%;
+      // height: auto;
+      // .clear();
+      // .center();
+      // // .flex(row, space-beetwen);
+      // flex-wrap: wrap;
+      // list-style: none;
 
-      & li {
-        .clear();
-        width: @sizeIcons;
-        height: @sizeIcons;
-        margin: 0 10px 10px 10px;
-        position: relative;
-        animation: nav;
-        animation-delay: 3s;
-        animation-duration: 1s;
-        animation-fill-mode: forwards;
+      // & li {
+      //   .clear();
+      //   width: @sizeIcons;
+      //   height: @sizeIcons;
+      //   margin: 0 10px 10px 10px;
+      //   position: relative;
+      //   animation: nav;
+      //   animation-delay: 3s;
+      //   animation-duration: 1s;
+      //   animation-fill-mode: forwards;
 
-        & .icon {
-          .center();
-          text-decoration: none;
-          color: @textColor;
-          display: inline-block;
+      //   & .icon {
+      //     .center();
+      //     text-decoration: none;
+      //     color: @textColor;
+      //     display: inline-block;
 
-          &:hover:before {
-            width: @sizeIcons + 8px;
-            height: @sizeIcons + 8px;
-            background-color: rgba(255, 255, 255, 0.2);
-          }
+      //     &:hover:before {
+      //       width: @sizeIcons + 8px;
+      //       height: @sizeIcons + 8px;
+      //       background-color: rgba(255, 255, 255, 0.2);
+      //     }
 
-          &:before {
-            width: @sizeIcons;
-            height: @sizeIcons;
-            font-family: @iconFont;
-            .border(@textColor);
-            border-radius: 100%;
-            text-align: center;
-            font-size: @iconFontSize - 5px;
-            .center();
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            transition: 0.3s;
-          }
-        }
+      //     &:before {
+      //       width: @sizeIcons;
+      //       height: @sizeIcons;
+      //       font-family: @iconFont;
+      //       .border(@textColor);
+      //       border-radius: 100%;
+      //       text-align: center;
+      //       font-size: @iconFontSize - 5px;
+      //       .center();
+      //       position: absolute;
+      //       top: 0;
+      //       left: 50%;
+      //       transform: translateX(-50%);
+      //       transition: 0.3s;
+      //     }
+      //   }
 
-        // & .nodejs:before {
-        //   content: '\E618';
-        // }
-        // & .mongodb:before {
-        //   content: '\E6A4';
-        // }
-        // & .js:before {
-        //   content: '\E64E';
-        // }
-        // & .html:before {
-        //   content: '\E636';
-        // }
-        // & .css:before {
-        //   content: '\E64A';
-        // }
-        // & .less:before {
-        //   content: '\E658';
-        //   font-size: @iconFontSize + 10px;
-        // }
-        // & .github:before {
-        //   content: '\E609';
-        // }
-        // & .npm:before {
-        //   content: '\E61E';
-        // }
-        & .tori:before {
-          content: 'Tori';
-        }
-        & .dobuy:before {
-          content: 'DoBuy';
-          font-size: @iconFontSize - 5px;
-        }
-        & .lords:before {
-          content: 'Lords';
-        }
-        & .monex:before {
-          content: 'Monex';
-        }
-        & .jcash:before {
-          content: 'JCash';
-        }
-        & .anycash:before {
-          content: 'Any Cash';
-        }
-        & .pwa:before {
-          content: 'PWA';
-        }
-        .loopChild(8);
-      }
+      //   // & .nodejs:before {
+      //   //   content: '\E618';
+      //   // }
+      //   // & .mongodb:before {
+      //   //   content: '\E6A4';
+      //   // }
+      //   // & .js:before {
+      //   //   content: '\E64E';
+      //   // }
+      //   // & .html:before {
+      //   //   content: '\E636';
+      //   // }
+      //   // & .css:before {
+      //   //   content: '\E64A';
+      //   // }
+      //   // & .less:before {
+      //   //   content: '\E658';
+      //   //   font-size: @iconFontSize + 10px;
+      //   // }
+      //   // & .github:before {
+      //   //   content: '\E609';
+      //   // }
+      //   // & .npm:before {
+      //   //   content: '\E61E';
+      //   // }
+      //   & .tori:before {
+      //     content: 'Tori';
+      //   }
+      //   & .dobuy:before {
+      //     content: 'DoBuy';
+      //     font-size: @iconFontSize - 5px;
+      //   }
+      //   & .lords:before {
+      //     content: 'Lords';
+      //   }
+      //   & .monex:before {
+      //     content: 'Monex';
+      //   }
+      //   & .jcash:before {
+      //     content: 'JCash';
+      //   }
+      //   & .anycash:before {
+      //     content: 'Any Cash';
+      //   }
+      //   & .pwa:before {
+      //     content: 'PWA';
+      //   }
+      //   .loopChild(8);
+      // }
     }
   }
 }
@@ -292,6 +292,150 @@ body {
     // transform: translateY(0%);
     opacity: 1;
   }
+}
+.projects {
+  width: 40%;
+  height: auto;
+  .clear();
+  .center();
+  // .flex(row, space-beetwen);
+  flex-wrap: wrap;
+  list-style: none;
+  &__item {
+    .clear();
+    width: @sizeIcons;
+    height: @sizeIcons;
+    margin: 0 10px 10px 10px;
+    position: relative;
+    animation: nav;
+    animation-delay: 3s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    cursor: pointer;
+
+    & .icon {
+      .center();
+      text-decoration: none;
+      color: @textColor;
+      display: inline-block;
+
+      &:hover:before {
+        width: @sizeIcons + 8px;
+        height: @sizeIcons + 8px;
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+
+      &:before {
+        width: @sizeIcons;
+        height: @sizeIcons;
+        font-family: @iconFont;
+        .border(@textColor);
+        border-radius: 100%;
+        text-align: center;
+        font-size: @iconFontSize - 5px;
+        .center();
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: 0.3s;
+      }
+    }
+
+    // & .nodejs:before {
+    //   content: '\E618';
+    // }
+    // & .mongodb:before {
+    //   content: '\E6A4';
+    // }
+    // & .js:before {
+    //   content: '\E64E';
+    // }
+    // & .html:before {
+    //   content: '\E636';
+    // }
+    // & .css:before {
+    //   content: '\E64A';
+    // }
+    // & .less:before {
+    //   content: '\E658';
+    //   font-size: @iconFontSize + 10px;
+    // }
+    // & .github:before {
+    //   content: '\E609';
+    // }
+    // & .npm:before {
+    //   content: '\E61E';
+    // }
+    & .tori:before {
+      content: 'Tori';
+    }
+    & .dobuy:before {
+      content: 'DoBuy';
+      font-size: @iconFontSize - 5px;
+    }
+    & .lords:before {
+      content: 'Lords';
+    }
+    & .monex:before {
+      content: 'Monex';
+    }
+    & .jcash:before {
+      content: 'JCash';
+    }
+    & .anycash:before {
+      content: 'Any Cash';
+    }
+    & .pwa:before {
+      content: 'PWA';
+    }
+    .loopChild(8);
+  }
+}
+
+.popup {
+  &__wrap {
+    position: fixed;
+    min-width: 280px;
+    max-width: 350px; 
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background: white;
+    border-radius: 5px;
+    font-size: 12px;
+    z-index: 2;
+    transform: translateX(-50%) translateY(calc(-100% - 5px));
+
+  }
+  &__header {
+    text-align: center;
+    margin: 5px 0;
+    width: 100%;
+    font-size: 14px;
+  }
+  &__tex.features{
+      overflow: auto;
+  }
+  &__tex {
+    display: flex;
+    margin: 3px 0;
+    &--title {
+      // margin-left: 10px;
+    }
+    &--list{
+      padding-left: 25px;
+      text-align: left;
+    }
+    &--list.features {
+      text-align: left;
+      padding-left: 20px;
+    }
+  }
+  // &__features{
+  //   display: flex;
+  //   flex-direction: column;
+  // }
 }
 @media screen and (orientation: portrait) {
   #header {

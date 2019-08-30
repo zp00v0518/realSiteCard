@@ -4,15 +4,16 @@
     <meta charset="UTF-8" />
     <title>Card Site</title>
     <link rel="stylesheet" href="style/style.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="Description" content="web card">
-    <script src="js/liveReload.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="web card" />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
+    <script src="js/appData.js"></script>
   </head>
   <body>
     <div id="bodyWrap" class="">
       <div id="overlay"></div>
       <main id="main">
-        <ul class="links">
+        <ul class="links" @mouse>
           <li class="links__item">
             <a href="https://t.me/Dmitriy_T_S">
               <img
@@ -80,54 +81,13 @@
               <a href="https://www.npmjs.com/" class="icon npm"></a>
             </li>
           </ul> -->
-          <ul>
-            <li>
-              <a
-                href="https://app.tori.nz/"
-                target="blank"
-                class="icon tori"
-              ></a>
-            </li>
-
-            <li>
-              <a
-                href="http://dobuy.com.ua"
-                target="blank"
-                class="icon dobuy"
-              ></a>
-            </li>
-            <li>
-              <a
-                href="http://lords.dobuy.com.ua"
-                target="blank"
-                class="icon lords"
-              ></a>
-            </li>
-            <li>
-              <a href="https://monex.me/" target="blank" class="icon monex"></a>
-            </li>
-            <li>
-              <a
-                href="http://jcash.co/ru/"
-                target="blank"
-                class="icon jcash"
-              ></a>
-            </li>
-            <li>
-              <a
-                href="https://any.cash/ru/"
-                target="blank"
-                class="icon anycash"
-              ></a>
-            </li>
-            <li>
-              <a
-                href="https://test.dobuy.com.ua"
-                target="blank"
-                class="icon pwa"
-              ></a>
-            </li>
-          </ul>
+          <ul class="projects">
+            <app-li
+              v-for="(item, index) in appData"
+              :key="index"
+              :item="item"
+              :id="index"
+            ></app-li>
         </nav>
       </header>
     </div>
@@ -139,5 +99,6 @@
         overlay.style.opacity = 1;
       };
     </script>
+    <script src="js/index.js"></script>
   </body>
 </html>
