@@ -1,8 +1,8 @@
-const Popup = Vue.component('app-popup', {
-  name: 'Popup',
+const Popup = Vue.component("app-popup", {
+  name: "Popup",
   props: {
     info: { type: Object, default: () => {} },
-    isTouch: { type: Boolean, default: false }
+    isTouch: { type: Boolean, default: false },
   },
   template: `<section class="popup__wrap" :style="styles">
   <h4 class="popup__header">{{info.header}}</h4>
@@ -19,7 +19,7 @@ const Popup = Vue.component('app-popup', {
   </section>`,
   data() {
     return {
-      styles: {}
+      styles: {},
     };
   },
   methods: {
@@ -27,24 +27,31 @@ const Popup = Vue.component('app-popup', {
       const parentEl = this.$parent.$el;
       const parentStyles = parentEl.getBoundingClientRect();
       if (this.isTouch) {
-        const div = document.querySelector('.info');
+        const div = document.querySelector(".info");
         const divStyles = div.getBoundingClientRect();
         const styles = {
-          left: '50%',
-          top: divStyles.top + 'px',
-          maxHeight: divStyles.top - 20 + 'px',
-          transform: 'translateX(-50%) translateY(-100%)'
+          left: "50%",
+          top: divStyles.top + "px",
+          maxHeight: divStyles.top - 20 + "px",
+          transform: "translateX(-50%) translateY(-100%)",
         };
         this.styles = styles;
         return styles;
       }
+      const leftShift = 190;
+      let left = parentStyles.left + parentStyles.width / 2;
+      left = left < leftShift ? leftShift : left;
       const styles = {
-        left: parentStyles.left + parentStyles.width / 2 + 'px',
-        top: parentStyles.top + 'px'
+        left: left + "px",
+        top: parentStyles.top + "px",
       };
+      const popupStyle = this.$el.getBoundingClientRect();
+      if (parentStyles.top - popupStyle.height < 20) {
+        styles.top = parentStyles.bottom + 40 + popupStyle.height + "px";
+      }
       this.styles = styles;
       return styles;
-    }
+    },
   },
   mounted() {
     this.$nextTick(() => {
@@ -52,33 +59,41 @@ const Popup = Vue.component('app-popup', {
       el.appendChild(this.$el);
       this.getStyles();
     });
-  }
+  },
 });
 
-const liItem = Vue.component('app-li', {
-  name: 'liItem',
+const liItem = Vue.component("app-li", {
+  name: "liItem",
   components: { Popup },
   props: {
     item: { type: Object, default: () => {} },
-    id: { type: String, default: '' }
+    id: { type: String, default: "" },
   },
+  // @mouseleave="closePopup"
   template: `<li 
                 class="projects__item" 
-                @mouseenter="showPopup" 
+                @mouseenter="showPopup"
                 @mouseleave="closePopup"
                 @touchstart="handlerTouch">
-              <a
+                <a
+              v-if="item.href"
                 :href="item.href"
                 target="blank"
                 :class="['icon', id]"
               ></a>
+              <div
+                v-else
+                :href="item.href"
+                target="blank"
+                :class="['icon', id]"
+              ></div>
               <app-popup v-if="isShowPopup" :info="item.info" :isTouch="isTouch"/>
             </li>`,
   data() {
     return {
       isShowPopup: false,
       isTouch: false,
-      mouseevent: null
+      mouseevent: null,
     };
   },
   methods: {
@@ -94,22 +109,22 @@ const liItem = Vue.component('app-li', {
         this.isTouch = true;
         this.showPopup();
         event.preventDefault();
-        document.addEventListener('click', this.closePopup);
+        document.addEventListener("click", this.closePopup);
         return;
       }
       this.isTouch = false;
       this.closePopup();
-      document.removeEventListener('click', this.closePopup);
-    }
+      document.removeEventListener("click", this.closePopup);
+    },
   },
 });
 
 new Vue({
-  el: '#bodyWrap',
+  el: "#bodyWrap",
   components: { liItem },
   data() {
     return {
-      appData
+      appData,
     };
-  }
+  },
 });

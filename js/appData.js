@@ -4,7 +4,7 @@ const appData = {
     href: 'https://app.tori.nz/',
     info: {
       header: 'ERP-система',
-      tex: 'VueJs, Element-UI, Symfony, MySQL',
+      tex: 'VueJs, Element-UI, Canvas, SCSS, ChartJs',
       features: [
         'Вся клиентская часть реализована мной',
         'Код предоставляет возможность динамического построения страниц. Управляется с сервера',
@@ -83,6 +83,18 @@ const appData = {
       features: [
         'Добавляется на любой девайс, на котором реализована поддержка технологии PWA',
         'Мой ребенок играется)'
+      ]
+    }
+  },
+  betParser: {
+    title: 'BetParser',
+    href: '',
+    info: {
+      header: 'Парсер букмекерскир контор ',
+      tex: 'Puppeteer, NodeJs, Vue3, Element-UI, MongoDB, WebSocket',
+      features: [
+        'Парсер букмекерских контор, на предмет поиска вилок',
+        'Пока только личное использование'
       ]
     }
   }
