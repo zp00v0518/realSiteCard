@@ -208,6 +208,15 @@ body {
   -webkit-transition-duration: 1.5s;
   transition-duration: 1.5s;
 }
+
+.download-link {
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+	position: absolute;
+	top: 24px;
+	right: 24px;
+}
 @-webkit-keyframes bg {
   0% {
     background-position: 0 bottom;

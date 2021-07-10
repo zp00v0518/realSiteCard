@@ -51,36 +51,6 @@
         <h1 class="name">Dmitriy Tarabanov</h1>
         <p class="info">Game &nbsp;•&nbsp; Job &nbsp;•&nbsp; Life</p>
         <nav class="nav">
-          <!-- <ul>
-            <li>
-              <a
-                href="https://www.ecma-international.org/ecma-262/8.0/index.html"
-                class="icon js"
-              ></a>
-            </li>
-            <li>
-              <a href="https://nodejs.org/" class="icon nodejs"></a>
-            </li>
-            <li>
-              <a href="https://www.mongodb.com/" class="icon mongodb"></a>
-            </li>
-
-            <li>
-              <a href="https://www.w3.org/TR/html52/" class="icon html"></a>
-            </li>
-            <li>
-              <a href="https://www.w3.org/TR/CSS/" class="icon css"></a>
-            </li>
-            <li>
-              <a href="http://lesscss.org/" class="icon less"></a>
-            </li>
-            <li>
-              <a href="https://github.com/" class="icon github"></a>
-            </li>
-            <li>
-              <a href="https://www.npmjs.com/" class="icon npm"></a>
-            </li>
-          </ul> -->
           <ul class="projects">
             <app-li
               v-for="(item, index) in appData"
@@ -91,6 +61,7 @@
         </nav>
       </header>
     </div>
+    <a class="download-link" href="/cv.doc" download="cv.doc">Загрузить CV</a>
     <script>
       window.onload = function() {
         var bodyWrap = document.getElementById('bodyWrap');
